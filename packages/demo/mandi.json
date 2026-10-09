@@ -9,7 +9,6 @@
   },
   "description": "Starter domain package for a new Lochan app. Rename it, or delete it and author your own alongside.",
   "requires": [],
-  "tier": "domain",
   "category": "starter",
   "tags": ["starter", "example"],
   "icon": "Widgets",
