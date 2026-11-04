@@ -2,7 +2,12 @@
   "primary": "demo",
   "packages": {
     "demo": {
-      "image": "demo:latest"
+      "dev": "packages/demo"
     }
+  },
+  "ports": {
+    "prod": {"nginx": 8631, "frontend": 8632, "backend": 8633},
+    "staging": {"nginx": 8634, "frontend": 8635, "backend": 8636, "postgres": 5491},
+    "dev": {"nginx": 8637, "frontend": 8638, "backend": 8639, "postgres": 5492}
   }
 }
