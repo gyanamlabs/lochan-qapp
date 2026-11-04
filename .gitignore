@@ -1,7 +1,6 @@
-# Bootstrap + app-tier secrets — NEVER commit
+# App-tier secrets (.env.prod and each tier's) — NEVER commit
 .env
 .env.*
-!.env.example
 
 # Private keys
 *.pem
@@ -24,9 +23,9 @@
 *.swp
 
 # ── Generator output — NEVER commit ──────────────────────────────────────────
-# `setup.sh` regenerates all of these from packages.json using the framework's
-# own generator. Committing them would create a second definition that drifts
-# from what the framework emits.
+# The framework's generator (daksh.generators.generate-app-config) writes these
+# from packages.json. Committing them would create a second definition that
+# drifts from what the framework emits.
 compose.yml
 compose.dev.yml
 compose.dev.override.yml

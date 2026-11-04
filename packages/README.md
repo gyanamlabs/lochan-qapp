@@ -8,7 +8,7 @@ segment to reconcile.
 
 ```
 packages/<name>/
-├── mandi.json              # tier: "domain" — the package manifest
+├── mandi.json              # the package manifest
 └── backend/<module>/       # your Python module
     ├── auto_wire/          # schemas + models the framework discovers
     ├── services/           # @tool / @on_event decorated services
