@@ -21,10 +21,6 @@ demo = "demo"
 [tool.setuptools.packages.find]
 include = ["demo*"]
 
-# mandi.json lives beside the module and must ship with the wheel — but note
-# that a wheel still does NOT carry the sibling data/embed-artifacts/ tree,
-# which is why a Lochan package travels as a git working tree.
-[tool.setuptools.package-data]
-"demo" = [
-    "mandi.json",
-]
+# A wheel does NOT carry the manifest (packages/demo/mandi.yaml, outside the
+# module) nor the sibling data/embed-artifacts/ tree, which is why a Lochan
+# package travels as a git working tree.

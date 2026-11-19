@@ -6,10 +6,10 @@ package shape.
 
 AUTO-WIRE: the framework discovers and wires everything by convention —
 ``models.py`` / ``models/``, ``services/*.py`` (via ``@tool``, ``@on_event``,
-``@context``, ``@health_metric``), ``schemas/*.json``, and the roles and
+``@context``, ``@health_metric``), ``schemas/*.yaml``, and the roles and
 permissions declared on ``DemoPackage``. Add those directories as your package
 grows; nothing here needs to register them by hand. Capabilities go in
-``mandi.json:provides``.
+``mandi.yaml:provides``.
 
 This package deliberately defines neither ``provide(ctx)`` nor
 ``make_routers(ctx)``: per the convention both are OPTIONAL, and this package
@@ -40,7 +40,7 @@ class DemoPackage(PackageBase):
     """demo's identity and RBAC; trishul seeds these roles and permissions at boot.
 
     Startup, shutdown and health are PackageBase's. Capabilities are declared in
-    ``mandi.json:provides``.
+    ``mandi.yaml:provides``.
     """
 
     name = "demo"
